@@ -2,8 +2,9 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class Cocktails extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +13,13 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('cocktails', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('ingredients')->nullable();
+            $table->integer('spirit_id')->unsigned();
+            $table->integer('category_id')->unsigned()->nullable();
+            $table->integer('flavor_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('cocktails');
     }
 }

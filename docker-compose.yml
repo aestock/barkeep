@@ -7,12 +7,10 @@ web:
         - "35729:35729" # live reload
         - "9876:9876" # karma server
     volumes:
-        - ~/.composer:/home/homestead/.composer # composer caching
-        - ~/.gitconfig:/home/homestead/.gitconfig # Git configuration ( access alias && config )
         - ~/.ssh:/home/homestead/.ssh # Ssh keys for easy deployment inside the container
-        - ~/apps:/apps # all apps
-        - ~/apps/volumes/nginx/sites-available:/etc/nginx/sites-available # nginx sites ( in case you recreate the container )
-        - ~/apps/volumes/nginx/sites-enabled:/etc/nginx/sites-enabled # nginx sites ( in case you recreate the container )
+        - ../barkeep:/apps # all apps
+#        - ~/apps/volumes/nginx/sites-available:/etc/nginx/sites-available # nginx sites ( in case you recreate the container )
+#        - ~/apps/volumes/nginx/sites-enabled:/etc/nginx/sites-enabled # nginx sites ( in case you recreate the container )
     links:
         - mariadb
 
@@ -25,4 +23,4 @@ mariadb:
         MARIADB_USER: admin # cannot be changed ( for info. only )
         MARIADB_PASS: root
     volumes:
-        - ~/apps/volumes/mysql:/var/lib/mysql # database files
+        - /var/lib/mysql # database files
