@@ -67,7 +67,7 @@ class DealersChoiceController extends Controller
 
 
 
-        return response()->json(['cocktail' => $cocktail], 200);
+        return view('match', ['cocktail' => $cocktail]);
     }
 
     private function parseSpirit($choices, $query){
