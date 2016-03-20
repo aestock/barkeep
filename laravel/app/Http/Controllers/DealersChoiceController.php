@@ -64,9 +64,6 @@ class DealersChoiceController extends Controller
         }while($cocktails->count() <= 0);
 
         $cocktail = $this->getCocktail($cocktails);
-        
-        $image = $this->getImage();
-        $cocktail->bartenders[0]['image'] = $image;
 
         return view('match', ['cocktail' => $cocktail]);
     }
@@ -135,26 +132,5 @@ class DealersChoiceController extends Controller
         return $cocktails[Mt_rand(0, count($cocktails)-1)];
 
     }
-
-    private function getImage()
-    {
-        $service_url = 'https://randomuser.me/api/';
-        $curl = curl_init($service_url);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $curl_response = curl_exec($curl);
-        if ($curl_response === false) {
-            $info = curl_getinfo($curl);
-            curl_close($curl);
-            die('error occured during curl exec. Additioanl info: ' . var_export($info));
-        }
-        curl_close($curl);
-        $decoded = json_decode($curl_response);
-        if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
-            die('error occured: ' . $decoded->response->errormessage);
-        }
-
-        return $decoded->results[0]->user->picture->thumbnail;
-    }
-
 
 }
