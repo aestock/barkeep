@@ -32,3 +32,7 @@ Route::get('swiper', 'ProfileController@getWords');
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::get('match', function () {
+    return view('match');
+});
