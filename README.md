@@ -34,7 +34,7 @@ ssh -p 2222 homestead@localhost
 ### Add a virtual host
 Assuming you mapped your apps folder to ```/apps``` (you can change mappings in the docker-compose.yml file, it's prefered to use absolute paths), you can do:
 ```shell
-cd / && ./serve.sh myapp.dev /apps/myapp/public
+cd / && ./serve.sh default /apps/laravel/public
 ```
 In the host, update ``` /etc/hosts ``` to include your app domain:
 ```shell
