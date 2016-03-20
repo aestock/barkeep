@@ -14,8 +14,8 @@ class ProfileController extends Controller
     public function getWords()
     {
         return view('home',
-            ['flavors' => Flavor::all(),
-            'categories' =>  Category::all(),
-            'spirits' => Spirit::all()]);
+            ['flavors' => Flavor::all()->toArray(),
+            'categories' =>  Category::all()->toArray(),
+            'spirits' => Spirit::all()->toArray()]);
     }
 }
