@@ -10,7 +10,7 @@ class SpiritTableSeeder extends Seeder
      *
      * @return void
      */
-    private $words = ['gin', 'wiskey', 'bourbon', '	vodka', 'tequila', 'vermouth', 'campari', 'absinthe'];
+    private $words = ['gin', 'wiskey', 'bourbon', 'vodka', 'tequila', 'vermouth', 'campari', 'absinthe', 'scotch', 'rum', 'brandy'];
     public function run()
     {
         foreach($this->words as $word) Spirit::insert(['name' => $word]);

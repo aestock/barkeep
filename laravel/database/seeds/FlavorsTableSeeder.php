@@ -11,7 +11,7 @@ class FlavorsTableSeeder extends Seeder
      * @return void
      *
      */
-    private $words = ['fruity', 'herbal', 'smokey', 'bubbly', 'bitter', 'anis', 'spicy', 'savory'];
+    private $words = ['fruity', 'herbal', 'smokey', 'bubbly', 'bitter', 'spicy', 'savory', 'floral', 'salty'];
     public function run()
     {
         foreach($this->words as $word) Flavor::insert(['name' => $word]);
