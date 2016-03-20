@@ -26,6 +26,9 @@ Route::get('/', function () {
 |
 */
 
+
+Route::get('swiper', 'ProfileController@getWords');
+
 Route::group(['middleware' => ['web']], function () {
     //
 });
