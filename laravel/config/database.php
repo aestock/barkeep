@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'admin.corkguru.dev'),
-            'port' => env('DB_PORT', '3306'),
+            'host' => env('DB_HOST', '192.168.99.100'),
+            'port' => env('DB_PORT', '33060'),
             'database' => env('DB_DATABASE', 'barkeep'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
+            'username' => env('DB_USERNAME', 'admin'),
+            'password' => env('DB_PASSWORD', 'root'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
