@@ -18,4 +18,9 @@
       </div>
     </div>
   </div>
+
+  <div class="center-align">
+    <a class="teal lighten-2 btn" onClick="location.reload()">Try Again</a>
+  </div>
+
 </div>
