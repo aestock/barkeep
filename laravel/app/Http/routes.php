@@ -29,6 +29,8 @@ Route::get('/', function () {
 
 Route::get('swiper', 'ProfileController@getWords');
 
+Route::post('find-bartender', 'DealersChoiceController@getBartender');
+
 Route::group(['middleware' => ['web']], function () {
     //
 });

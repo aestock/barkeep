@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bartender extends Model
 {
-    public function bartenders(){
+    public function restaurant(){
         return $this->belongsTo('App\Restaurant');
     }
     public function cocktails(){

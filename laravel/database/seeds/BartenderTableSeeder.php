@@ -16,7 +16,7 @@ class BartenderTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach (range(1,40) as $index) {
+        foreach (range(1,41) as $index) {
             Bartender::insert([
                 'name' => $faker->firstName . ' ' . $faker->lastName,
                 'restaurant_id' => $faker->numberBetween(1, 10),

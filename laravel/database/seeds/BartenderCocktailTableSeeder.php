@@ -14,13 +14,14 @@ class BartenderCocktailTableSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        foreach (range(1,200) as $index) {
+        //make sure every cocktail has a bartender
+        foreach (range(1,41) as $index) {
             DB::table('bartender_cocktail')
                 ->insert([
-                    'bartender_id' => $faker->numberBetween(1,40),
-                    'cocktail_id' => $faker->numberBetween(1, 41),
+                    'bartender_id' => $index,
+                    'cocktail_id' => $index,
                     'vote' => $faker->numberBetween(10, 200)
-            ]);
+                ]);
         }
     }
 }
