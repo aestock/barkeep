@@ -1,3 +1,6 @@
+<?php
+    echo $flavors;
+    ?>
 <!DOCTYPE html>
 <html>
     <head>
