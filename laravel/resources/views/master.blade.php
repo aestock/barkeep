@@ -21,16 +21,12 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <!-- <ul id="nav-mobile" class="left">
-          <li><i class="large material-icons">perm_identity</i></li>
-        </ul> -->
         <a href="#" class="brand-logo"><img src="/img/logo_wordmark.png" alt="barkeep" height="20" /></a>
-        <!-- <ul id="nav-mobile" class="right">
-          <li><i class="large material-icons">search</i></li>
-        </ul> -->
       </div>
     </nav>
 
-    @yield('content')
+    <div class="content-wrap">
+      @yield('content')
+    </div>
 
 </body>

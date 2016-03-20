@@ -67,6 +67,7 @@ body {
     height: 100%;
     display: block;
     content: '';
+    z-index: 100;
   }
 }
 
@@ -181,7 +182,7 @@ $distance: 400px;
   .yes {
     right: 38px;
     .trigger:before {
-      content: "\f004";
+      content: "\f00c";
       font-size: 22px;
       color: #3b7;
     }

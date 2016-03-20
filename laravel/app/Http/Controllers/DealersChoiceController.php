@@ -37,7 +37,7 @@ class DealersChoiceController extends Controller
      */
     public function getBartender()
     {
-        $choices = Input::get('choices');
+        $choices = Input::get();
 
         $i = 0;
 

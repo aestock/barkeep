@@ -10,39 +10,40 @@ shuffle($flavors);
 shuffle($categories);
 ?>
 
-<div class="component row">
-  <div class="col">
-    <div class="card-panel blue-grey darken-1">
-      <div class="component-name white-text"><?php echo $spirits[0]['name'] ?></div>
-    </div>
-  </div>
-</div>
-
-<div class="component row">
-  <div class="col">
-    <div class="card-panel blue-grey darken-1">
-      <div class="component-name white-text"><?php echo $flavors[0]['name'] ?></div>
-    </div>
-  </div>
-</div>
-
-<div class="component row">
-  <div class="col">
-    <div class="card-panel blue-grey darken-1">
-      <div class="component-name white-text"><?php echo $categories[0]['name'] ?></div>
-    </div>
-  </div>
-</div>
-
-<!--
-  <div class="component card-container row">
+  <div class="component card-container row" data-type="spirits" data-nameid="<?php echo $spirits[0]['id'] ?>">
     <div class="col">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <span class="card-title">Gin</span>
+          <span class="card-title"><?php echo $spirits[0]['name'] ?></span>
         </div>
         <div class="card-action">
-          <p>I like gin. Swipe me bae.</p>
+          <p>spirit</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component card-container row" data-type="flavors" data-nameid="<?php echo $flavors[0]['id'] ?>">
+    <div class="col">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"><?php echo $flavors[0]['name'] ?></span>
+        </div>
+        <div class="card-action">
+          <p>flavor</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component card-container row" data-type="categories" data-nameid="<?php echo $categories[0]['id'] ?>">
+    <div class="col">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title"><?php echo $categories[0]['name'] ?></span>
+        </div>
+        <div class="card-action">
+          <p>mood</p>
         </div>
       </div>
     </div>
@@ -50,42 +51,16 @@ shuffle($categories);
 
   <div class="component card-container row">
     <div class="col">
-      <div class="card blue-grey darken-1">
+      <div class="card blue-grey lighten-1">
         <div class="card-content white-text">
-          <span class="card-title">Campari</span>
+          <span class="card-title">shaking...</span>
         </div>
         <div class="card-action">
-          <p>You're gross</p>
+          <p>finding you something good</p>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="component card-container row">
-    <div class="col">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">herbal</span>
-        </div>
-        <div class="card-action">
-          <p>so earthy</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="component card-container row">
-    <div class="col">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Scotch</span>
-        </div>
-        <div class="card-action">
-          <p>Ew.</p>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
 </div>
 <div id="control">
