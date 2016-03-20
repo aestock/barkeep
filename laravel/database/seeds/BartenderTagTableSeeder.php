@@ -14,7 +14,7 @@ class BartenderTagTableSeeder extends Seeder
         DB::table('bartender_tag')
             ->insert([
             'bartender_id' => '',
-            'tag_id' => '',
+            'tag_id' => ''
         ]);
     }
 }

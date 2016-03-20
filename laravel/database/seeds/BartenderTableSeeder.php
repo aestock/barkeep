@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Seeder;
 use App\Bartender;
+use App\Restaurant;
+
+use Faker\Factory as Faker;
 
 class BartenderTableSeeder extends Seeder
 {
@@ -12,10 +15,13 @@ class BartenderTableSeeder extends Seeder
      */
     public function run()
     {
-        Bartender::insert([
-            'name' => '',
-            'restaurant_id' => '',
-            'vote' => '',
-        ]);
+        $faker = Faker::create();
+        foreach (range(1,40) as $index) {
+            Bartender::insert([
+                'name' => $faker->name,
+                'restaurant_id' => $faker->numberBetween(1, 10),
+                'followers' => $faker->biasedNumberBetween(0, 100),
+            ]);
+        }
     }
 }

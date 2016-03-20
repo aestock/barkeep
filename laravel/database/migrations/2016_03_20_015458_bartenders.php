@@ -16,7 +16,7 @@ class Bartenders extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('restaurant_id');
-            $table->integer('vote')->nullable();
+            $table->integer('followers')->nullable();
             $table->timestamps();
         });
     }

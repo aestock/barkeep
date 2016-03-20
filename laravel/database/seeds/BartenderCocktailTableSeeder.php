@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use Faker\Factory as Faker;
+
 class BartenderCocktailTableSeeder extends Seeder
 {
     /**
@@ -11,11 +13,14 @@ class BartenderCocktailTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('bartender_cocktail')
-            ->insert([
-                'bartender_id' => ,
-                'cocktail_id' => ,
-                'vote' =>
+        $faker = Faker::create();
+        foreach (range(1,200) as $index) {
+            DB::table('bartender_cocktail')
+                ->insert([
+                    'bartender_id' => $faker->numberBetween(1,40),
+                    'cocktail_id' => $faker->numberBetween(1, 41),
+                    'vote' => $faker->numberBetween(10, 200)
             ]);
+        }
     }
 }
