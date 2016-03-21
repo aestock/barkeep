@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Cocktail;
-use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Input;
-use Symfony\Component\HttpFoundation\Response;
 
 class DealersChoiceController extends Controller
 {
@@ -37,7 +35,7 @@ class DealersChoiceController extends Controller
      */
     public function getBartender()
     {
-        $choices = Input::get();
+        $choices = Input::get('choices');
 
         $i = 0;
 

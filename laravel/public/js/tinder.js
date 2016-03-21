@@ -4,8 +4,6 @@ $(document).ready(function() {
     return false;
   });
 
-
-  var toJson = [];
   var choices = [];
 
   var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
@@ -18,9 +16,9 @@ $(document).ready(function() {
       var animate = liked ? 'animateYes' : 'animateNo';
       var self = this;
 
-      var choice = [];
+      var choice = {};
       choice['type'] = $('.component').data('type');
-      choice['nameid'] = $('.component').data('nameid');
+      choice['name_id'] = $('.component').data('nameid');
       choice['wanted'] = liked ? 1 : 0;
 
       choices.push(choice);
@@ -51,11 +49,13 @@ $(document).ready(function() {
     clicks++;
     if(clicks == 3) {
         $('#control').hide();
-        var json = []
-        json["choices"] = choices;
-        $.post('/find-bartender', json, function(data) {
-          setTimeout($('.content-wrap').html(data), 3000);
-        });
+        setTimeout(function() {makePostRequest()}, 1000);
     }
+  }
+
+  function makePostRequest(){
+    $.post('/find-bartender', {choices : choices}, function(data) {
+      setTimeout($('.content-wrap').html(data), 3000);
+    });
   }
 });
