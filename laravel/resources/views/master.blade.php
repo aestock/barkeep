@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>barkeep</title>
+    <title>Barkeep</title>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
@@ -21,7 +21,7 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center"><img src="/img/logo_wordmark.png" alt="barkeep" height="20" /></a>
+        <a href="#" class="brand-logo center"><img src="/img/logo_wordmark.png" alt="Barkeep" height="20" /></a>
       </div>
     </nav>
 
