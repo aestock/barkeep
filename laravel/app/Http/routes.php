@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 /*
 |--------------------------------------------------------------------------
@@ -27,14 +24,14 @@ Route::get('/', function () {
 */
 
 
-Route::get('swiper', 'ProfileController@getWords');
+Route::get('/', 'ProfileController@getWords');
+
+Route::get('swiper', function () {
+    return redirect('/');
+});
 
 Route::post('find-bartender', 'DealersChoiceController@getBartender');
 
 Route::group(['middleware' => ['web']], function () {
     //
-});
-
-Route::get('match', function () {
-    return view('match');
 });
