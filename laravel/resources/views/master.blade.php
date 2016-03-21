@@ -21,13 +21,21 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><img src="/img/logo_wordmark.png" alt="barkeep" height="20" /></a>
+        <a href="#" class="brand-logo center"><img src="/img/logo_wordmark.png" alt="barkeep" height="20" /></a>
       </div>
     </nav>
 
-    <div class="content-wrap">
+    <main class="content-wrap">
       @yield('content')
-    </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-copyright center">
+        <div class="container">
+        &copy; 2016 <a href="http://www.barkeepapp.co">Barkeep</a>
+        </div>
+      </div>
+    </footer>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -37,7 +45,6 @@
 
       ga('create', 'UA-75331176-1', 'auto');
       ga('send', 'pageview');
-
     </script>
-
-</body>
+  </body>
+</html>

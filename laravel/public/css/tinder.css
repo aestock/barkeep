@@ -96,7 +96,8 @@ body {
 #control {
   position: relative;
   margin: 15px auto 0;
-  width: 250px; }
+  width: 250px;
+  height: 65px; }
   #control .button {
     width: 65px;
     height: 65px;

@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col s12 m7">
+  <div class="col s12 m6 offset-m3 l4 offset-l4">
     <div class="card">
       <div class="card-image">
         <img src="/img/icon_shake.png">
@@ -18,9 +18,7 @@
       </div>
     </div>
   </div>
-
-  <div class="center-align">
-    <a class="teal lighten-2 btn" onClick="location.reload()">Try Again</a>
-  </div>
-
+</div>
+<div class="row center-align">
+  <a class="teal lighten-2 btn" onClick="location.reload()">Shake Again</a>
 </div>

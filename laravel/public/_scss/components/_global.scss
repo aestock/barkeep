@@ -8,13 +8,20 @@ html {
 }
 
 body {
-  // display: flex;
-  // min-height: 100vh;
-  // flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 main {
-  // flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 ul {
@@ -342,7 +349,7 @@ ul.staggered-list li {
 // Footer
 footer.page-footer {
   margin-top: 20px;
-  padding-top: 20px;
+  // padding-top: 20px;
   background-color: $footer-bg-color;
 
   .footer-copyright {
